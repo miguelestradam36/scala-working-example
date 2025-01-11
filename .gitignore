@@ -8,3 +8,9 @@
 
 .bsp
 .bsp/
+
+.metals/
+.metals
+
+.vscode
+.vscode/
