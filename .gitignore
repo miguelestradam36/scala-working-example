@@ -2,3 +2,9 @@
 *.log
 .bsp/
 .bsp
+
+.scala-build/
+.scala-build
+
+.bsp
+.bsp/
