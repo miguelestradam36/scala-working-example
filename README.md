@@ -8,11 +8,7 @@ In this repository, I am going to save one quick working example of the `SCALA` 
 First for this project, you are going to open one window on the `CMD`, and open the directory in which your scala code is:
 
 ```shell
-scalac <nameofthefile>.scala
-```
-
-After that command, to compile our code, we are going to execute this command:
-
-```shell
 scala run <nameofthefile>.scala
 ```
+
+That will compile our code.
