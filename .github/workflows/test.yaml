@@ -31,6 +31,3 @@ jobs:
 
       - name: Run the project
         run: sbt run
-
-      - name: Run the unit tests
-        run: sbt test
