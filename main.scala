@@ -1,4 +1,5 @@
-
+//> using dep "com.softwaremill.sttp.client4::core:4.0.0-M22"
+//> using toolkit latest
 
 import scala.io.Source;
 import scala.util.{Try, Success, Failure};

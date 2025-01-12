@@ -7,5 +7,4 @@ lazy val root = project
     scalaVersion := "3.6.2",
     scalacOptions ++= Seq("-deprecation"),
     libraryDependencies += "org.scala-lang" %% "toolkit" % "0.1.7",
-    libraryDependencies += "com.softwaremill.sttp.client4" %% "core" % "4.0.0-M6"
   )
