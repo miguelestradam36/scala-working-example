@@ -14,3 +14,9 @@
 
 .vscode
 .vscode/
+
+project
+project/
+
+target
+target/

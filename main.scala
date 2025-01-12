@@ -4,8 +4,9 @@
 import scala.io.Source;
 import scala.util.{Try, Success, Failure};
 import java.io.{File, PrintWriter};
-import sttp.client4.quick.*
-import sttp.client4.Response
+import sttp.client4.quick.*;
+import sttp.client4.Response;
+//import play.api.libs.json.Json;
 
 object Main
 {
@@ -14,18 +15,15 @@ object Main
       if (response.code.toString == "200"){
         val file = new File("data.json");
         val writer = new PrintWriter(file);
-        writer.write(response.body);
-        println("Request body saved into JSON file...");
-        // Will develop this part later
-        // writer.write(response.headers);
-        // println("Request header saved into JSON file...");
-        for (elem <- response.headers) {
-          //val parsed = JSON.parseFull(elem.toString)
-          writer.write(elem.toString);
-        }
-        // println("Request header saved into JSON file...");
+        var data = response.body;
+        //for (elem <- response.headers) {
+        //  //val parsed = JSON.parseFull(elem.toString)
+        //  var element = s"{'element':'${elem.toString}'},";
+        //  writer.write(element);
+        //}
+        writer.write(data);
+        println("Request saved into JSON file...");
         writer.close();
-        println("Saved the data on the data folder...");
       } else {
         println("There was an error during the request")
       }

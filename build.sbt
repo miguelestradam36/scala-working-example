@@ -6,5 +6,9 @@ lazy val root = project
     version := "0.1.0",
     scalaVersion := "3.6.2",
     scalacOptions ++= Seq("-deprecation"),
-    libraryDependencies += "org.scala-lang" %% "toolkit" % "0.1.7"
+    libraryDependencies ++= Seq(
+        "org.scala-lang" % "scala-reflect" % "2.11.7",
+        "org.scala-lang" %% "toolkit" % "0.1.7",
+        "org.scala-lang.modules" % "scala-xml_2.11" % "1.0.4"
+        )
   )
