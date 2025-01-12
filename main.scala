@@ -14,11 +14,16 @@ object Main
       if (response.code.toString == "200"){
         val file = new File("data.json");
         val writer = new PrintWriter(file);
+        writer.write(response.body);
+        println("Request body saved into JSON file...");
         // Will develop this part later
         // writer.write(response.headers);
         // println("Request header saved into JSON file...");
-        writer.write(response.body);
-        println("Request body saved into JSON file...");
+        for (elem <- response.headers) {
+          //val parsed = JSON.parseFull(elem.toString)
+          writer.write(elem.toString);
+        }
+        // println("Request header saved into JSON file...");
         writer.close();
         println("Saved the data on the data folder...");
       } else {

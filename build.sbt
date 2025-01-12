@@ -7,4 +7,5 @@ lazy val root = project
     scalaVersion := "3.6.2",
     scalacOptions ++= Seq("-deprecation"),
     libraryDependencies += "org.scala-lang" %% "toolkit" % "0.1.7",
+    libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4"
   )
