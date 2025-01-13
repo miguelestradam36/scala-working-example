@@ -1,0 +1,18 @@
+
+{"access-control-allow-origin":" *"},
+{"server":" gunicorn/19.9.0"},
+{"date":"10 GMT"},
+{"content-type":" application/json"},
+{"":" 200"},
+{"access-control-allow-credentials":" true"},
+{"content-length":" 286"},{
+  "args": {}, 
+  "headers": {
+    "Accept-Encoding": "gzip, deflate", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Java-http-client/11.0.25", 
+    "X-Amzn-Trace-Id": "Root=1-6785676a-4694c5f4046972b647eac31f"
+  }, 
+  "origin": "45.65.191.12", 
+  "url": "https://httpbin.org/get"
+}

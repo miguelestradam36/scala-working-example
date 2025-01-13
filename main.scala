@@ -15,12 +15,17 @@ object Main
       if (response.code.toString == "200"){
         val file = new File("data.json");
         val writer = new PrintWriter(file);
-        var data = response.body;
-        //for (elem <- response.headers) {
-        //  //val parsed = JSON.parseFull(elem.toString)
-        //  var element = s"{'element':'${elem.toString}'},";
-        //  writer.write(element);
-        //}
+        var data = "";
+        for (elem <- response.headers) {
+          val res = elem.toString.split(":");
+          val a = res.head.toString;
+          val b = res.last.toString;
+          //val parsed = JSON.parseFull(elem.toString)
+          var element = s"\n{\"${a}\":\"${b}\"},";
+          //writer.write(parsed);
+          data += element;
+        }
+        data += response.body;
         writer.write(data);
         println("Request saved into JSON file...");
         writer.close();
